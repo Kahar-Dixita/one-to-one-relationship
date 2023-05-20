@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Employee;
+use App\Models\Account;
 use Illuminate\Http\Request;
 use App\Http\Requests\EmployeePostRequest;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -32,8 +33,16 @@ class EmployeeController extends Controller
     public function store(EmployeePostRequest $request): RedirectResponse
     {
 
-        $employees= Employee::create($request->all());
-        $employees->save();
+        // $employees= Employee::create($request->all());
+$validatedData = $request->validated();
+$employee = new Employee;
+$employee->fill($request->all());
+$account = Account:: first();
+        if($account)
+        {
+            $employee->account_id = $account->id;
+        }
+        $employee->save();
         return redirect()->route('employees.index')->with('status','User created successfully.');
 
     }

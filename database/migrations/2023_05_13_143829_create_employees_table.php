@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name')->nullable();
             $table->string('salary')->nullable();
-            $table->unsignedBigInteger('account_id');
+            $table->uuid('account_id')->nullable();
             $table->foreign('account_id')->references('id')->on('accounts');
             $table->SoftDeletes();
             $table->timestamps();

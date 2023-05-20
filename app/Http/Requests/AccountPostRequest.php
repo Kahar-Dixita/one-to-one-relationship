@@ -22,7 +22,7 @@ class AccountPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'account_id' =>'',
+            // 'account_id' =>'',
            ' name' => 'required|string',
             'contact_no' => 'required|integer',
             'email' => 'required',

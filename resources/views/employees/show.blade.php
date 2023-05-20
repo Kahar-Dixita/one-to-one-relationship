@@ -14,7 +14,12 @@
          <form class="container form-control bg-secondary border-dark mx-auto p-5 "style="width: 700px; --bs-bg-opacity: .5;">
 
          <!-- </div> -->
-
+         <div class="mb-3 col-10 fs-5">
+            <div class="form-group">
+              <strong>id:</strong>
+              {{ $employee->id}}
+          </div>
+        </div>
          <div class="mb-3 col-10 fs-5">
              <div class="form-group">
                <strong>name:</strong>

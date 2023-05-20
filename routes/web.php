@@ -20,7 +20,7 @@ use App\Http\Controllers\IndexController;
 //     return view('welcome');
 // });
 
-Route::resource('/accounts', AccountController::class)->middleware('auth');
+Route::resource('/accounts', AccountController::class);
 // Route::resource('/employees', EmployeeController::class)->middleware('auth');
 Auth::routes();
 

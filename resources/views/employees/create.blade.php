@@ -39,7 +39,7 @@
          @endif
          </div>
 
-         <div class="mb-3 col-10 fs-5">
+         {{-- <div class="mb-3 col-10 fs-5">
             <label for="account_id">Account_id:</label>
             <input type="text" class="form-control" id="account_id" name="account_id" placeholder="Enter account">
             @if ($errors->has('account_id'))
@@ -47,7 +47,7 @@
                 {{ $errors->first('account_id') }}
             </div>
         @endif
-        </div>
+        </div> --}}
          <br>
          <div d-flex>
              <button type="submit" class="btn btn-outline-dark">Create</button>
