@@ -34,10 +34,10 @@ class EmployeeController extends Controller
     {
 
         // $employees= Employee::create($request->all());
-$validatedData = $request->validated();
-$employee = new Employee;
-$employee->fill($request->all());
-$account = Account:: first();
+        $validatedData = $request->validated();
+        $employee = new Employee;
+        $employee->fill($request->all());
+        $account = Account:: first();
         if($account)
         {
             $employee->account_id = $account->id;

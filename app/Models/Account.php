@@ -12,7 +12,7 @@ class account extends Model
     use HasFactory;
     use Uuid;
     use SoftDeletes;
-    // protected $table="accounts";
+     protected $primarykey="id";
     protected $fillable = ['name','contact_no','email','gender','hobbies'];
 
     public function setHobbiesAttribute($value)
@@ -24,7 +24,7 @@ class account extends Model
     // {
     //     return $this->hasOne(Employee::class,'account_id');
     // }
-    public function employee()
+    public function employees()
     {
         return $this->hasMany(Employee::class,'account_id');
     }

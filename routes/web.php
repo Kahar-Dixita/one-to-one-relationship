@@ -28,5 +28,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::resource('/employees', EmployeeController::class);
 
 Route::resource('/index', IndexController::class);
-// Route
-// ::get('add-account',[AccountController::class,'add_account']);
+

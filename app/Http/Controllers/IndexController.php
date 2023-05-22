@@ -28,7 +28,8 @@ class IndexController extends Controller
     // }
     public function index()
     {
-        return Account::with('employee')->get();
+        $accounts = Account::with('employees')->get();
+        return view('index',compact('accounts'));
     }
 }
 

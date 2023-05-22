@@ -38,6 +38,12 @@
            {{ $employee->salary}}
        </div>
   </div>
+  <div class="mb-3 col-10 fs-5">
+    <div class="form-group">
+      <strong>account:</strong>
+      {{ $employee->account_id}}
+  </div>
+</div>
  </div>
  <a class="btn btn-outline-dark " href="{{ route('employees.index') }}">Back</a>
  </form>
