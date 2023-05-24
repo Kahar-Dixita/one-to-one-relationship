@@ -1,0 +1,2 @@
+@include('students.form')
+@csrf

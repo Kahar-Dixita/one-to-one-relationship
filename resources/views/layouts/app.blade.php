@@ -36,6 +36,12 @@
                         <li class="nav-item">
                             <a class="nav-link" action="#" href="{{ route('employees.index') }}" target="_self">Employee</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" action="#" href="{{ route('students.index') }}" target="_self">Student</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" action="#" href="{{ route('teachers.index') }}" target="_self">Teacher</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -1,9 +1,9 @@
 @extends('welcome')
 <body class="mt-5">
 
-   {{-- <h1 class="container p-3 bg-dark text-white text-center "style="width: 700px;">Show student</h1> --}}
+   {{-- <h1 class="container p-3 bg-dark text-white text-center "style="width: 700px;">Show Account</h1> --}}
             <!-- <div class="pull-right"> -->
-                <!-- <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a> -->
+                <!-- <a class="btn btn-primary" href="{{ route('accounts.index') }}"> Back</a> -->
             <!-- </div> -->
         <!-- </div> -->
     <!-- </div> -->
@@ -26,18 +26,18 @@
           </div>
      </div>
      <div class="mb-3 col-10 fs-5">
-        <div class="form-group">
-          <strong>contact_no:</strong>
-          {{ $student->contact_no}}
-      </div>
- </div>
- <div class="mb-3 col-10 fs-5">
-        <div class="form-group">
-          <strong>email:</strong>
-          {{ $student->email}}
-      </div>
- </div>
-</div>
+         <div class="form-group">
+             <strong>email:</strong>
+             {{ $student->email}}
+            </div>
+        </div>
+        <div class="mb-3 col-10 fs-5">
+           <div class="form-group">
+             <strong>address:</strong>
+             {{ $student->address}}
+         </div>
+    </div>
+    </div>
 <a class="btn btn-outline-dark" href="{{ route('students.index') }}">Back</a>
 </form>
 </body>

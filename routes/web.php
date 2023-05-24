@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
+
+
+
 // use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +32,9 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/employees', EmployeeController::class);
 
-Route::resource('/index', IndexController::class);
+Route::get('/index', [IndexController::class,'index']);//one to many
+Route::get('/data', [IndexController::class,'data']);//manyto many
 
+Route::resource('/students', StudentController::class);
+
+Route::resource('/teachers', TeacherController::class);
